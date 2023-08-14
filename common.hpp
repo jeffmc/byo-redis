@@ -69,6 +69,14 @@ void fd_set_nb(int fd) {
 }
 
 enum {
+	SER_NIL = 0, // Like null
+	SER_ERR = 1, // An error code and a message
+	SER_STR = 2, // A string
+	SER_INT = 3, // An int64
+	SER_ARR = 4, // Array
+};
+
+enum {
 	STATE_REQ = 0,
 	STATE_RES = 1,
 	STATE_END = 2,
